@@ -16,6 +16,11 @@ namespace Vamos_Brincar.Controllers
             ModelState.Clear();
             return View(ci.GetAti());
         }
+        public ActionResult IndexIns()
+        {
+            ModelState.Clear();
+            return View(ci.GetAti());
+        }
 
         // GET: Ati/Details/5
         public ActionResult Details(int id)
@@ -82,7 +87,8 @@ namespace Vamos_Brincar.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            return View();
+            ci.deleteati(id);
+            return RedirectToAction("Index");
         }
 
         // POST: Ati/Delete/5
