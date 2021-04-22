@@ -59,7 +59,7 @@ namespace Vamos_Brincar.Models
         {
             string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
             MySqlConnection mysqlconn = new MySqlConnection(mainconn);
-            string sqlquery = "update atividade set nome='" + atiEdit.nome + "'decricao='" + atiEdit.descricao + "'avaliacao='" + atiEdit.avaliacao+ "'where id_atividade='" + atiEdit.id_atividade + "'";
+            string sqlquery = "update atividade set avaliacao='"+ atiEdit.avaliacao+ "'where id_atividade='" + atiEdit.id_atividade + "'";
             MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
             mysqlconn.Open();
             int i = sqlcomm.ExecuteNonQuery();
