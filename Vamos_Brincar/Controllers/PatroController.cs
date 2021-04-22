@@ -16,6 +16,9 @@ namespace Vamos_Brincar.Controllers
             ModelState.Clear();
             return View(pi.GetPat());
         }
+        public ActionResult Index2() {
+            return View();
+        }
 
         // GET: Patro/Details/5
         public ActionResult Details(int id)

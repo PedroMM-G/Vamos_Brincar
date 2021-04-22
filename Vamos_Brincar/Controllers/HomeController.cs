@@ -14,7 +14,9 @@ namespace Vamos_Brincar.Controllers
         {
             return View();
         }
-
+        public ActionResult Index_Intituicao() {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
