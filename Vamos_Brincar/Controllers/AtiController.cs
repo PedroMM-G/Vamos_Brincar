@@ -16,6 +16,11 @@ namespace Vamos_Brincar.Controllers
             ModelState.Clear();
             return View(ci.GetAti());
         }
+        public ActionResult Index2()
+        {
+            ModelState.Clear();
+            return View(ci.GetAti());
+        }
 
         // GET: Ati/Details/5
         public ActionResult Details(int id)
