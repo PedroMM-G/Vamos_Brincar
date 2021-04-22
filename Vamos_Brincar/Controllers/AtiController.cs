@@ -16,7 +16,7 @@ namespace Vamos_Brincar.Controllers
             ModelState.Clear();
             return View(ci.GetAti());
         }
-        public ActionResult IndexIns()
+        public ActionResult ConAtiIns()
         {
             ModelState.Clear();
             return View(ci.GetAti());

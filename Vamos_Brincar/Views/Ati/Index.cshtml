@@ -65,29 +65,7 @@
 
                 @foreach (var item in Model)
                 {
-<<<<<<< Updated upstream
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.id_atividade)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.nome)
-                        </td>
 
-
-                        <td>
-                            @Html.DisplayFor(modelItem => item.descricao)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.avaliacao)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.id_atividade}) |
-                            @Html.ActionLink("Details", "Details", new { id=item.id_atividade }) |
-                            @Html.ActionLink("Delete", "Delete", new {  id=item.id_atividade })
-                        </td>
-                    </tr>
-=======
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.id_atividade)
@@ -109,7 +87,7 @@
          @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */@color = "blue" })
      </td>-->
             </tr>
->>>>>>> Stashed changes
+
                 }
 
             </table>

@@ -30,9 +30,6 @@ namespace Vamos_Brincar.Controllers
 
             return View();
         }
-                public ActionResult Index_Instituicao(){
                 
-                return View();
         }
     }
-}

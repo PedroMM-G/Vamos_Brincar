@@ -453,7 +453,7 @@
     <Content Include="Views\Crianca\Index_Crianca.cshtml" />
     <Content Include="Views\Crianca\Jogos.cshtml" />
     <Content Include="Views\Ati\Edit.cshtml" />
-    <Content Include="Views\Ati\IndexIns.cshtml" />
+    <Content Include="Views\Ati\ConAtiIns.cshtml" />
     <Content Include="Views\Home\Index_Intituicao.cshtml" />
     <Content Include="Views\Patro\Index2.cshtml" />
   </ItemGroup>
