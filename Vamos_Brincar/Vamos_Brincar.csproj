@@ -452,6 +452,8 @@
     <Content Include="Views\Sug\Details.cshtml" />
     <Content Include="Views\Crianca\Index_Crianca.cshtml" />
     <Content Include="Views\Crianca\Jogos.cshtml" />
+    <Content Include="Views\Ati\Edit.cshtml" />
+    <Content Include="Views\Ati\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

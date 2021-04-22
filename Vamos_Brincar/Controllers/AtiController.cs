@@ -54,9 +54,11 @@ namespace Vamos_Brincar.Controllers
         }
 
         // GET: Ati/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int id, CrudProp updateati)
         {
-            return View();
+            ci.editAti(updateati);
+            return RedirectToAction("Index");
+          
         }
 
         // POST: Ati/Edit/5

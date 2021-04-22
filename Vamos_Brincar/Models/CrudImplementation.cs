@@ -27,7 +27,7 @@ namespace Vamos_Brincar.Models
                 ListaAtividade.Add(new CrudProp {
                     id_atividade = Convert.ToInt32(dr["id_atividade"]),
                     nome = Convert.ToString(dr["nome"]),
-                    data_at = Convert.ToDateTime(dr["data_at"]),
+                    //data_at = Convert.ToDateTime(dr["data_at"]),
                     descricao = Convert.ToString(dr["descricao"]),
                     avaliacao = Convert.ToInt32(dr["avaliacao"]),
                 }
@@ -40,7 +40,7 @@ namespace Vamos_Brincar.Models
         {
             string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
             MySqlConnection mysqlconn = new MySqlConnection(mainconn);
-            string sqlquery = "insert into atividade (nome, data_at, descricao ,avaliacao) values ('"+atiInsert.nome+ "','" + atiInsert.data_at + "','" + atiInsert.descricao + "','" + atiInsert.avaliacao + "') ";
+            string sqlquery = "insert into atividade (nome, descricao ,avaliacao) values ('"+ atiInsert.nome+ "','" + atiInsert.descricao + "','" + atiInsert.avaliacao + "') ";
             MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
             mysqlconn.Open();
             int i = sqlcomm.ExecuteNonQuery();
@@ -54,6 +54,25 @@ namespace Vamos_Brincar.Models
             {
                 return false;
             }   
+        }
+        public bool editAti(CrudProp atiEdit)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
+            MySqlConnection mysqlconn = new MySqlConnection(mainconn);
+            string sqlquery = "update crianca set nome='" + atiEdit.nome + "'where id_crianca='" + atiEdit.id_atividade + "'";
+            MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
+            mysqlconn.Open();
+            int i = sqlcomm.ExecuteNonQuery();
+            mysqlconn.Close();
+            if (i >= 1)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
