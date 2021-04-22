@@ -82,7 +82,8 @@ namespace Vamos_Brincar.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            return View();
+            ci.deleteati(id);
+            return RedirectToAction("Index");
         }
 
         // POST: Ati/Delete/5
