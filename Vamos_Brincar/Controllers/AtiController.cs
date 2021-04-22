@@ -78,6 +78,7 @@ namespace Vamos_Brincar.Controllers
         }
 
         // GET: Ati/Delete/5
+        [HttpGet]
         public ActionResult Delete(int id)
         {
             return View();
