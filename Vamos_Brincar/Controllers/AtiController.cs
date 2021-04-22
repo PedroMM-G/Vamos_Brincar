@@ -54,21 +54,22 @@ namespace Vamos_Brincar.Controllers
         }
 
         // GET: Ati/Edit/5
-        public ActionResult Edit(int id, CrudProp updateati)
+        public ActionResult Edit(int id)
         {
-            ci.editAti(updateati);
-            return RedirectToAction("Index");
-          
+    
+            return View(ci.GetAti().Find(itermodel
+                => itermodel.id_atividade == id));
+
         }
 
         // POST: Ati/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, CrudProp updateati)
         {
             try
             {
                 // TODO: Add update logic here
-
+                ci.editAti(updateati);
                 return RedirectToAction("Index");
             }
             catch
