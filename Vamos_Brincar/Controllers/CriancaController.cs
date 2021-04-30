@@ -11,6 +11,14 @@ namespace Vamos_Brincar.Controllers
     {
         // GET: Crianca
         CrudCrianca cc = new CrudCrianca();
+
+        public ActionResult LoginCrianca() {
+            return View();
+        }
+        public ActionResult RegisterCrianca()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             ModelState.Clear();

@@ -9,6 +9,14 @@ namespace Vamos_Brincar.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult RegisterInst()
+        {
+            return View();
+        }
+        public ActionResult LoginInst()
+        {
+            return View();
+        }
         public ActionResult Index()
 
         {
