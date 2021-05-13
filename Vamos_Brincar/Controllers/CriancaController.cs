@@ -16,6 +16,7 @@ namespace Vamos_Brincar.Controllers
        
 
         public ActionResult LoginCrianca() {
+           
             return View();
         }
         [HttpPost]
@@ -26,10 +27,10 @@ namespace Vamos_Brincar.Controllers
             {
                 using (CadastroEntities cd = new CadastroEntities()) 
                 {
-                    var v = cd.crianca.Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
+                    v = cd.crianca.Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
                     if (v != null)
                     {
-                        Console.Write(v);
+                        
                         Session["usuarioLogadoID"] = v.id_crianca.ToString();
                         Session["nomeUsuarioLogado"] = v.nome.ToString();
                         return RedirectToAction("Index_Crianca");
@@ -51,10 +52,7 @@ namespace Vamos_Brincar.Controllers
         }
         public ActionResult Index_Crianca()
         {
-            if (Session["usuarioLogadoID"] != null)
-            {
-                return View();
-            }
+            return View();
 
         }
         public ActionResult Jogos()
