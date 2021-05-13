@@ -1,40 +1,62 @@
 ﻿@model Vamos_Brincar.Models.Criancamod
 
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "LoginCrianca";
 }
-<h2>Login</h2>
-@using (Html.BeginForm("Index_Crianca", "Crianca", FormMethod.Post))
+
+<h2>LoginCrianca</h2>
+
+
+@using (Html.BeginForm()) 
 {
-    //cria a tag do formulário
-    @Html.AntiForgeryToken() // previne o ataque CSRF
-    @Html.ValidationSummary(true)
-    if (@ViewBag.Message != null)
-    {
-        <div style="border:1px solid red">
-            @ViewBag.Message
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Criancamod</h4>
+    <hr />
+    <!-- @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.id_crianca, htmlAttributes: new { @class = "control-label col-md-2", Value = "1" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.id_crianca, new { htmlAttributes = new { @class = "form-control", Value = "1" } })
+            @Html.ValidationMessageFor(model => model.id_crianca, "", new { @class = "text-danger", Value = "1" })
         </div>
-    }
-    <table>
-        <tr>
-            <td>@Html.LabelFor(a => a.nome)</td>
-            <td>@Html.TextBoxFor(a => a.nome)</td>
-            <td>@Html.ValidationMessageFor(a => a.nome)</td>
-        </tr>
-        <tr>
-            <td> @Html.LabelFor(a => a.pass)</td>
-            <td> @Html.PasswordFor(a => a.pass) </td>
-            <td> @Html.ValidationMessageFor(a => a.pass) </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <input type="submit" value="Login" />
-            </td>
-            <td></td>
-        </tr>
-    </table>
+    </div>-->
+
+    <div class="form-group">
+        @Html.LabelFor(a => a.nome, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(a => a.nome, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(a => a.nome, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!--<div class="form-group">
+         @Html.LabelFor(model => model.idade, htmlAttributes: new { @class = "control-label col-md-2", Value = "69" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.idade, new { htmlAttributes = new { @class = "form-control", Value = "69" } })
+             @Html.ValidationMessageFor(model => model.idade, "", new { @class = "text-danger", Value = "69" })
+         </div>
+     </div>-->
+
+    <div class="form-group">
+        @Html.LabelFor(a => a.pass, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(a => a.pass, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(a => a.pass, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
 }
-@section Scripts{
+
+
+
+@section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
