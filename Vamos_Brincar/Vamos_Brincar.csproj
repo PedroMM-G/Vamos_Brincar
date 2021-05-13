@@ -465,9 +465,9 @@
     <Content Include="Views\Home\Index_Intituicao.cshtml" />
     <Content Include="Views\Patro\Index2.cshtml" />
     <Content Include="Views\Crianca\RegisterCrianca.cshtml" />
-    <Content Include="Views\Home\LoginInst.cshtml" />
     <Content Include="Views\Home\RegisterInst.cshtml" />
     <Content Include="Views\Crianca\LoginCrianca.cshtml" />
+    <Content Include="Views\Home\LoginInst.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

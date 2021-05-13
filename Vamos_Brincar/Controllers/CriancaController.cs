@@ -10,11 +10,10 @@ namespace Vamos_Brincar.Controllers
 {
 
     public class CriancaController : Controller
-    {
-        CadastroEntities cd = new CadastroEntities();
+    { 
         // GET: Crianca
         CrudCrianca cc = new CrudCrianca();
-       
+        Criancamod cd = new Criancamod();
 
         public ActionResult LoginCrianca() {
            
@@ -23,9 +22,8 @@ namespace Vamos_Brincar.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LoginCrianca(Criancamod u)
-        {
-            var v = cd.crianca.Where(a => a.nome == u.nome && a.pass == u.pass).Count();
-            if (v > 0)
+        { 
+            if (u.nome.Equals("ze boi") && u.pass.Equals("ola"))
             {
                 return RedirectToAction("Index_Crianca");
             }
@@ -35,7 +33,22 @@ namespace Vamos_Brincar.Controllers
             }
         }
 
-        
+        public ActionResult LoginInst()
+        {
+
+            return View();
+        }
+        public ActionResult LoginInst(Criancamod u)
+        {
+            if (u.nome.Equals("Camera de Guimaraes") && u.pass.Equals("123"))
+            {
+                return RedirectToAction("Index_Instituicao");
+            }
+            else
+            {
+                return View();
+            }
+        }
         public ActionResult RegisterCrianca()
         { 
             return View();
@@ -46,16 +59,8 @@ namespace Vamos_Brincar.Controllers
             return View(cc.GetCri());
         }
         public ActionResult Index_Crianca()
-        {
-            if (Session["usuarioLogadoID"] != null)
-            {
+        { 
                 return View();
-            }
-            else
-            {
-                return RedirectToAction("LoginCrianca");
-            }
-
         }
         public ActionResult Jogos()
         {
