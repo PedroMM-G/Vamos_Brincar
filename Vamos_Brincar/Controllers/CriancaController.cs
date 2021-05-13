@@ -11,12 +11,28 @@ namespace Vamos_Brincar.Controllers
     {
         // GET: Crianca
         CrudCrianca cc = new CrudCrianca();
+        Criancamod cd = new Criancamod();
 
-        public ActionResult LoginCrianca() {
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LoginCrianca(Criancamod u) {
+            if (ModelState.IsValid) //verifica se é válido
+            {
+                
+                {
+                    var v = cd.Criancamod.Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
+                    if (v != null)
+                    {
+                        Session["usuarioLogadoID"] = v.Id.ToString();
+                        Session["nomeUsuarioLogado"] = v.nome.ToString();
+                        return RedirectToAction("Index");
+                    }
+                }
+            }
             return View();
         }
         public ActionResult RegisterCrianca()
-        {
+        { 
             return View();
         }
         public ActionResult Index()
