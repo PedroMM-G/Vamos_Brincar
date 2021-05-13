@@ -13,29 +13,31 @@ namespace Vamos_Brincar.Controllers
      
         // GET: Crianca
         CrudCrianca cc = new CrudCrianca();
-        Criancamod cd = new Criancamod();
+       
 
         public ActionResult LoginCrianca() {
             return View();
         }
-               [HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login_Crianca(Criancamod u) {
+        public ActionResult LoginCrianca(Criancamod u) {
            
             if (ModelState.IsValid) //verifica se é válido
             {
-                
+                using (CadastroEntities cd = new CadastroEntities()) 
                 {
-                    var v = cc.GetCri().Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
+                    var v = cd.crianca.Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
                     if (v != null)
                     {
-                        Session["usuarioLogadoID"] = v.pass.ToString();
+                        Console.Write(v);
+                        Session["usuarioLogadoID"] = v.id_crianca.ToString();
                         Session["nomeUsuarioLogado"] = v.nome.ToString();
                         return RedirectToAction("Index_Crianca");
                     }
                 }
             }
-            return View();
+
+            return View(u);
 
         }
         public ActionResult RegisterCrianca()
@@ -47,17 +49,14 @@ namespace Vamos_Brincar.Controllers
             ModelState.Clear();
             return View(cc.GetCri());
         }
-        public ActionResult Index_Crianca() 
+        public ActionResult Index_Crianca()
         {
             if (Session["usuarioLogadoID"] != null)
             {
                 return View();
             }
-            else
-            {
-                return RedirectToAction("LoginCrianca");
-            }
-                }
+
+        }
         public ActionResult Jogos()
         {
             return View();

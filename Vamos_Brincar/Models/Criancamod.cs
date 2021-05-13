@@ -11,20 +11,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vamos_Brincar.Models
 {
-    [Table("Criancamod", Schema ="dbo")]
-    public class Criancamod
+    public partial class Criancamod
     {
-    
-        [Key]
+
         public int id_crianca { get; set; }
         [Display(Name = "Login")]
-        [Required(ErrorMessage = "Informe o nome do usuário", AllowEmptyStrings = false)]
-        public string nome { get; set; } 
+        [Required(ErrorMessage = "Introduza o seu nome", AllowEmptyStrings = false)]
+        public string nome { get; set; }
         public int idade { get; set; }
         [Display(Name = "Password")]
-        [Required(ErrorMessage = "Informe a senha do usuário", AllowEmptyStrings = false)]
-        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Introduza o sua palavra-passe", AllowEmptyStrings = false)]
+        [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         public string pass { get; set; }
-        
     }
-}
+    }
+    
