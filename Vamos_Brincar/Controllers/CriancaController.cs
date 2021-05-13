@@ -5,31 +5,38 @@ using System.Web;
 using System.Web.Mvc;
 using Vamos_Brincar.Models;
 
+
 namespace Vamos_Brincar.Controllers
 {
     public class CriancaController : Controller
     {
+     
         // GET: Crianca
         CrudCrianca cc = new CrudCrianca();
         Criancamod cd = new Criancamod();
 
-        [HttpPost]
+        public ActionResult LoginCrianca() {
+            return View();
+        }
+               [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult LoginCrianca(Criancamod u) {
+        public ActionResult Login_Crianca(Criancamod u) {
+           
             if (ModelState.IsValid) //verifica se é válido
             {
                 
                 {
-                    var v = cd.Criancamod.Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
+                    var v = cc.GetCri().Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
                     if (v != null)
                     {
-                        Session["usuarioLogadoID"] = v.Id.ToString();
+                        Session["usuarioLogadoID"] = v.pass.ToString();
                         Session["nomeUsuarioLogado"] = v.nome.ToString();
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Index_Crianca");
                     }
                 }
             }
             return View();
+
         }
         public ActionResult RegisterCrianca()
         { 
@@ -42,7 +49,14 @@ namespace Vamos_Brincar.Controllers
         }
         public ActionResult Index_Crianca() 
         {
-            return View();
+            if (Session["usuarioLogadoID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("LoginCrianca");
+            }
                 }
         public ActionResult Jogos()
         {

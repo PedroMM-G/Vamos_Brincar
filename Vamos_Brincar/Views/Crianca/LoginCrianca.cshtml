@@ -4,7 +4,7 @@
     ViewBag.Title = "Login";
 }
 <h2>Login</h2>
-@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+@using (Html.BeginForm("Index_Crianca", "Crianca", FormMethod.Post))
 {
     //cria a tag do formulário
     @Html.AntiForgeryToken() // previne o ataque CSRF
