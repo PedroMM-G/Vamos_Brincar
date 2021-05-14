@@ -46,7 +46,7 @@ namespace Vamos_Brincar.Controllers
                         ModelState.Clear();
                     }
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
             }
             catch
             {

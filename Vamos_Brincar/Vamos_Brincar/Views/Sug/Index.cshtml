@@ -43,15 +43,15 @@
 
             <table class="table">
                 <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.id_sug)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.id_crianca)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.id_inst)
-                    </th>
+                    <!--<th>
+          @Html.DisplayNameFor(model => model.id_sug)
+      </th>
+      <th>
+          @Html.DisplayNameFor(model => model.id_crianca)
+      </th>
+      <th>
+          @Html.DisplayNameFor(model => model.id_inst)
+      </th>-->
                     <th>
                         @Html.DisplayNameFor(model => model.sug)
                     </th>
@@ -60,25 +60,25 @@
 
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.id_sug)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.id_crianca)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.id_inst)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.sug)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.id_sug }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.id_sug }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.id_sug })
-                        </td>
-                    </tr>
+            <tr>
+                <!--<td>
+          @Html.DisplayFor(modelItem => item.id_sug)
+      </td>
+      <td>
+          @Html.DisplayFor(modelItem => item.id_crianca)
+      </td>
+      <td>
+          @Html.DisplayFor(modelItem => item.id_inst)
+      </td>-->
+                <td>
+                    @Html.DisplayFor(modelItem => item.sug)
+                </td>
+                <td>
+                    <!--@Html.ActionLink("Edit", "Edit", new { id = item.id_sug }) |
+     @Html.ActionLink("Details", "Details", new { id = item.id_sug }) |-->
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id_sug })
+                </td>
+            </tr>
                 }
 
             </table>

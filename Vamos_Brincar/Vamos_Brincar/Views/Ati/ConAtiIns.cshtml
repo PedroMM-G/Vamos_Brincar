@@ -46,9 +46,9 @@
             </p>
             <table class="table">
                 <tr>
-                  <th>
-                        @Html.DisplayNameFor(model => model.id_atividade)
-                    </th>
+                    <!--<th>
+           @Html.DisplayNameFor(model => model.id_atividade)
+       </th>-->
                     <th>
                         @Html.DisplayNameFor(model => model.nome)
                     </th>
@@ -65,27 +65,27 @@
 
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.id_atividade)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.nome)
-                        </td>
+            <tr>
+                <!--<td>
+         @Html.DisplayFor(modelItem => item.id_atividade)
+     </td>-->
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
 
 
-                        <td>
-                            @Html.DisplayFor(modelItem => item.descricao)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.avaliacao)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.id_atividade, @color = "blue" }) 
-                            <!--@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */@color = "blue" }) --> |
-                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */@color = "blue" })
-                        </td>
-                    </tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.avaliacao)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditInst", new { id = item.id_atividade, @color = "blue" })
+                    <!--@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */@color = "blue" }) --> |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */@color = "blue" })
+                </td>
+            </tr>
                 }
 
             </table>
