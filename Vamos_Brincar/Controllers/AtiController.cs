@@ -59,6 +59,31 @@ namespace Vamos_Brincar.Controllers
         }
 
         // GET: Ati/Edit/5
+<<<<<<< HEAD
+=======
+
+        public ActionResult EditInst(int id)
+        {
+
+            return View(ci.GetAti().Find(itermodel
+                => itermodel.id_atividade == id));
+
+        }
+        [HttpPost]
+        public ActionResult EditInst(int id, CrudProp updateati)
+        {
+            try
+            {
+                // TODO: Add update logic here
+                ci.editAti(updateati);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+>>>>>>> parent of 2c5514c (.)
         public ActionResult Edit(int id)
         {
     

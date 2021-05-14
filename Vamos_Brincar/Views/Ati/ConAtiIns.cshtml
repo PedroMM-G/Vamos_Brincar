@@ -28,6 +28,7 @@
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
 </head>
+<<<<<<< HEAD
 <body id="page-top" scroll="no" style="overflow: hidden">
 
     <div class="container">
@@ -106,6 +107,76 @@
                             <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://localhost:44344/Home/Index">Terminar Sessão</a></li>
                         </ul>
                     </div>
+=======
+<body id="page-top">
+
+
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Consultar Atividade</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form-->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <p>
+                            @Html.ActionLink("Create New", "Create")
+                        </p>
+                        <table class="table">
+                            <tr>
+                                <!--<th>
+        @Html.DisplayNameFor(model => model.id_atividade)
+    </th>-->
+                                <th>
+                                    @Html.DisplayNameFor(model => model.nome)
+                                </th>
+
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.descricao)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.avaliacao)
+                                </th>
+                                <th></th>
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                        <tr>
+                            <!--<td>
+        @Html.DisplayFor(modelItem => item.id_atividade)
+    </td>-->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.nome)
+                            </td>
+
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.descricao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.avaliacao)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.id_atividade, @color = "blue" })
+                                <!--@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */@color = "blue" }) --> |
+                                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */@color = "blue" })
+                            </td>
+                        </tr>
+                            }
+
+                        </table>
+                    </form>
+>>>>>>> parent of 2c5514c (.)
                 </div>
             </nav>
 
