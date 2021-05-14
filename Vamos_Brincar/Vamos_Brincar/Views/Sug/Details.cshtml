@@ -1,0 +1,50 @@
+﻿@model Vamos_Brincar.Models.SugestoesProp
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SugestoesProp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_sug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_sug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_crianca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_crianca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_inst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_inst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sug)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
