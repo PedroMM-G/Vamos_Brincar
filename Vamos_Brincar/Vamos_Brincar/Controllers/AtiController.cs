@@ -50,7 +50,7 @@ namespace Vamos_Brincar.Controllers
                         ModelState.Clear();
                     }
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction("ConAtiIns");
             }
             catch
             {
@@ -69,13 +69,14 @@ namespace Vamos_Brincar.Controllers
 
         // POST: Ati/Edit/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult EditInst(int id, CrudProp updateati)
         {
             try
             {
                 // TODO: Add update logic here
                 ci.editAti(updateati);
-                return RedirectToAction("Index");
+                return RedirectToAction("ConAtiIns");
             }
             catch
             {

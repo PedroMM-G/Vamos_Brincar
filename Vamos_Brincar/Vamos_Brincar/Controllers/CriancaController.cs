@@ -23,7 +23,7 @@ namespace Vamos_Brincar.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LoginCrianca(Criancamod u)
         { 
-            if (u.nome.Equals("ze boi") && u.pass.Equals("ola"))
+            if (u.nome.Equals("Tiago") && u.pass.Equals("lkj"))
             {
                 return RedirectToAction("Index_Crianca");
             }
@@ -33,22 +33,7 @@ namespace Vamos_Brincar.Controllers
             }
         }
 
-        public ActionResult LoginInst()
-        {
-
-            return View();
-        }
-        public ActionResult LoginInst(Criancamod u)
-        {
-            if (u.nome.Equals("Camera de Guimaraes") && u.pass.Equals("123"))
-            {
-                return RedirectToAction("Index_Instituicao");
-            }
-            else
-            {
-                return View();
-            }
-        }
+       
         public ActionResult RegisterCrianca()
         { 
             return View();
