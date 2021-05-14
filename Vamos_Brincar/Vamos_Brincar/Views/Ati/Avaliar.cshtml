@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Vamos Brincar</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons -->
+        <script src="https://kit.fontawesome.com/bb103a8609.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+        
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Material Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+          <link href="~/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        
+        
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Avaliar Atividade</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Introduz o Código que te foi dado pelo docente.</label>
+                                    <input class="form-control" id="actvcode" type="text" placeholder="Código da atividade" required="required" data-validation-required-message="Diz-nos qual o código da atividade, por favor." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                    <div class="rating-css" required="required" data-validation-required-message="Não te esqueças da tua avaliação!">
+                                        <div class="star-icon">
+                                        <input type="radio" name="rating1" id="rating1">
+                                        <label for="rating1" class="fa fa-star"></label>
+                                        <input type="radio" name="rating1" id="rating2">
+                                        <label for="rating2" class="fa fa-star"></label>
+                                        <input type="radio" name="rating1" id="rating3">
+                                        <label for="rating3" class="fa fa-star"></label>
+                                        <input type="radio" name="rating1" id="rating4">
+                                        <label for="rating4" class="fa fa-star"></label>
+                                        <input type="radio" name="rating1" id="rating5">
+                                        <label for="rating5" class="fa fa-star"></label>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Deixa um comentário</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Diz-nos o que achaste da atividade" required="required" data-validation-required-message="Escreve qualquer coisa, por favor."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <br />
+                            <div id="success"></div>
+                            <div class="form-group text-center"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Submeter</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-bottom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="Index_Crianca"><img class="img-fluid center" style="width: 250px;" src="~/images/logo-single-line.png" alt="" /></a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Index_Crianca">Voltar</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Definições</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://localhost:5001/">Terminar Sessão</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="~/assets/mail/jqBootstrapValidation.js"></script>
+        <script src="~/assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="~/js/scripts.js"></script>
+    </body>
+</html>
