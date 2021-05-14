@@ -23,7 +23,7 @@ namespace Vamos_Brincar.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LoginCrianca(Criancamod u)
         { 
-            if (u.nome.Equals("ze boi") && u.pass.Equals("ola"))
+            if (u.nome.Equals("Tiago") && u.pass.Equals("lkj"))
             {
                 return RedirectToAction("Index_Crianca");
             }

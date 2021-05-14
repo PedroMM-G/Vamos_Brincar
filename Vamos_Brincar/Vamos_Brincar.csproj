@@ -468,6 +468,7 @@
     <Content Include="Views\Home\RegisterInst.cshtml" />
     <Content Include="Views\Crianca\LoginCrianca.cshtml" />
     <Content Include="Views\Home\LoginInst.cshtml" />
+    <Content Include="Views\Ati\EditInst.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
