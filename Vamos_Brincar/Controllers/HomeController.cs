@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vamos_Brincar.Models;
 
 namespace Vamos_Brincar.Controllers
 {
@@ -14,13 +13,11 @@ namespace Vamos_Brincar.Controllers
         {
             return View();
         }
-       
-        public ActionResult Index()
-
+        public ActionResult LoginInst()
         {
             return View();
         }
-        public ActionResult LoginInst()
+        public ActionResult Index()
 
         {
             return View();

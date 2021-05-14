@@ -46,10 +46,9 @@
     </p>-->
             <table class="table">
                 <tr>
-                    <!--<th>
+                    <th>
                         @Html.DisplayNameFor(model => model.id_atividade)
-                    </th>-->
-                    
+                    </th>
                     <th>
                         @Html.DisplayNameFor(model => model.nome)
                     </th>
@@ -68,9 +67,9 @@
                 {
 
             <tr>
-                <!--<td>
-         @Html.DisplayFor(modelItem => item.id_atividade)
-     </td>-->
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_atividade)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.nome)
                 </td>
@@ -83,11 +82,10 @@
                     @Html.DisplayFor(modelItem => item.avaliacao)
                 </td>
                 <td>
-                    @Html.ActionLink("Avaliar", "Edit", new { id = item.id_atividade, @color = "blue" })
-                    <!--|
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */@color = "blue" }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */@color = "blue" })
-        </td>-->
+        @Html.ActionLink("Avaliar", "Edit", new { id = item.id_atividade, @color="blue"})  <!--|
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */@color = "blue" }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */@color = "blue" })
+    </td>-->
             </tr>
 
                 }
