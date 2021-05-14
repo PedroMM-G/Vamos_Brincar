@@ -8,12 +8,12 @@ using Vamos_Brincar.Models;
 
 namespace Vamos_Brincar.Controllers
 {
+
     public class CriancaController : Controller
-    {
-     
+    { 
         // GET: Crianca
         CrudCrianca cc = new CrudCrianca();
-       
+        Criancamod cd = new Criancamod();
 
         public ActionResult LoginCrianca() {
            
@@ -21,10 +21,11 @@ namespace Vamos_Brincar.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult LoginCrianca(Criancamod u) {
-           
-            if (ModelState.IsValid) //verifica se é válido
+        public ActionResult LoginCrianca(Criancamod u)
+        { 
+            if (u.nome.Equals("Tiago") && u.pass.Equals("lkj"))
             {
+<<<<<<< HEAD
                 using (CadastroEntities cd = new CadastroEntities()) 
                 {
                    var v = cd.crianca.Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
@@ -36,10 +37,31 @@ namespace Vamos_Brincar.Controllers
                         return RedirectToAction("Index_Crianca");
                     }
                 }
+=======
+                return RedirectToAction("Index_Crianca");
+>>>>>>> 169ffd91fd8a93530bd62b63a62b1c293a214b0c
             }
+            else
+            {
+                return View();
+            }
+        }
 
-            return View(u);
+        public ActionResult LoginInst()
+        {
 
+            return View();
+        }
+        public ActionResult LoginInst(Criancamod u)
+        {
+            if (u.nome.Equals("Camera de Guimaraes") && u.pass.Equals("123"))
+            {
+                return RedirectToAction("Index_Instituicao");
+            }
+            else
+            {
+                return View();
+            }
         }
         public ActionResult RegisterCrianca()
         { 
@@ -51,9 +73,8 @@ namespace Vamos_Brincar.Controllers
             return View(cc.GetCri());
         }
         public ActionResult Index_Crianca()
-        {
-            return View();
-
+        { 
+                return View();
         }
         public ActionResult Jogos()
         {

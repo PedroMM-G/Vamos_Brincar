@@ -476,14 +476,18 @@
     <Content Include="Views\Home\Index_Intituicao.cshtml" />
     <Content Include="Views\Patro\Index2.cshtml" />
     <Content Include="Views\Crianca\RegisterCrianca.cshtml" />
-    <Content Include="Views\Home\LoginInst.cshtml" />
     <Content Include="Views\Home\RegisterInst.cshtml" />
     <Content Include="Views\Crianca\LoginCrianca.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Instituicao\Index.cshtml" />
     <Content Include="Views\Instituicao\Create.cshtml" />
     <Content Include="Views\Instituicao\Details.cshtml" />
     <Content Include="Views\Instituicao\Edit.cshtml" />
     <Content Include="Views\Instituicao\Delete.cshtml" />
+=======
+    <Content Include="Views\Home\LoginInst.cshtml" />
+    <Content Include="Views\Ati\EditInst.cshtml" />
+>>>>>>> 169ffd91fd8a93530bd62b63a62b1c293a214b0c
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
