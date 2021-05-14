@@ -27,7 +27,7 @@ namespace Vamos_Brincar.Controllers
             {
                 using (CadastroEntities cd = new CadastroEntities()) 
                 {
-                    v = cd.crianca.Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
+                   var v = cd.crianca.Where(a => a.nome.Equals(u.nome) && a.pass.Equals(u.pass)).FirstOrDefault();
                     if (v != null)
                     {
                         
