@@ -74,7 +74,7 @@ namespace Vamos_Brincar.Controllers
             {
                 // TODO: Add update logic here
                 ci.editAti(updateati);
-                return RedirectToAction("Index");
+                return RedirectToAction("ConAtiIns");
             }
             catch
             {
