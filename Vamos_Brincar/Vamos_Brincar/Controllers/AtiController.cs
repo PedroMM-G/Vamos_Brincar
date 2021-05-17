@@ -112,7 +112,7 @@ namespace Vamos_Brincar.Controllers
         public ActionResult Delete(int id)
         {
             ci.deleteati(id);
-            return RedirectToAction("Index");
+            return RedirectToAction("ConAtiIns");
         }
 
         // POST: Ati/Delete/5
@@ -123,7 +123,7 @@ namespace Vamos_Brincar.Controllers
             {
                 // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("ConAtiIns");
             }
             catch
             {
