@@ -40,7 +40,7 @@ namespace Vamos_Brincar.Models
         {
             string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
             MySqlConnection mysqlconn = new MySqlConnection(mainconn);
-            string sqlquery = "insert into atividade (nome, descricao ,avaliacao) values ('"+ atiInsert.nome+ "','" + atiInsert.descricao + "','" + atiInsert.avaliacao + "') ";
+            string sqlquery = "insert into atividade ( nome, descricao ,avaliacao) values ('" + atiInsert.nome+ "','" + atiInsert.descricao + "','" + atiInsert.avaliacao + "') ";
             MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
             mysqlconn.Open();
             int i = sqlcomm.ExecuteNonQuery();
@@ -60,6 +60,25 @@ namespace Vamos_Brincar.Models
             string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
             MySqlConnection mysqlconn = new MySqlConnection(mainconn);
             string sqlquery = "update atividade set avaliacao='"+ atiEdit.avaliacao+ "'where id_atividade='" + atiEdit.id_atividade + "'";
+            MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
+            mysqlconn.Open();
+            int i = sqlcomm.ExecuteNonQuery();
+            mysqlconn.Close();
+            if (i >= 1)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool editAtiInst(CrudProp atiEdit)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
+            MySqlConnection mysqlconn = new MySqlConnection(mainconn);
+            string sqlquery = "update atividade set descricao='" + atiEdit.descricao + "', nome = '" + atiEdit.nome + "' where id_atividade='" + atiEdit.id_atividade + "'";
             MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
             mysqlconn.Open();
             int i = sqlcomm.ExecuteNonQuery();
