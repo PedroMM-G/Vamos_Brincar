@@ -306,6 +306,7 @@
     <Compile Include="Controllers\AtiController.cs" />
     <Compile Include="Controllers\CriancaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstituicaoController.cs" />
     <Compile Include="Controllers\PatroController.cs" />
     <Compile Include="Controllers\SugController.cs" />
     <Compile Include="Global.asax.cs">
@@ -314,8 +315,10 @@
     <Compile Include="Models\Criancamod.cs" />
     <Compile Include="Models\Crudcrianca.cs" />
     <Compile Include="Models\CrudImplementation.cs" />
+    <Compile Include="Models\CrudInstituicao.cs" />
     <Compile Include="Models\CrudProp.cs" />
     <Compile Include="Models\DbContext.cs" />
+    <Compile Include="Models\Instituicaomod.cs" />
     <Compile Include="Models\PatrocinioImplementation.cs" />
     <Compile Include="Models\PatrocinioProp.cs" />
     <Compile Include="Models\SugestoesImplementation.cs" />
@@ -469,6 +472,11 @@
     <Content Include="Views\Crianca\LoginCrianca.cshtml" />
     <Content Include="Views\Ati\EditInst.cshtml" />
     <Content Include="Views\Home\LoginInst.cshtml" />
+    <Content Include="Views\Instituicao\Index.cshtml" />
+    <Content Include="Views\Instituicao\Details.cshtml" />
+    <Content Include="Views\Instituicao\Create.cshtml" />
+    <Content Include="Views\Instituicao\Edit.cshtml" />
+    <Content Include="Views\Instituicao\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
