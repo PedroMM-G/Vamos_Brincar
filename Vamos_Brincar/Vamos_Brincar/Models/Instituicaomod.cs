@@ -15,7 +15,9 @@ namespace Vamos_Brincar.Models
     {
 
         public int id_inst { get; set; }
+        [Display(Name ="Nome da instituição")]
         public string nome { get; set; }
+        [Display(Name = "Palavra-passe")]
         public string pass { get; set; }
     }
 }

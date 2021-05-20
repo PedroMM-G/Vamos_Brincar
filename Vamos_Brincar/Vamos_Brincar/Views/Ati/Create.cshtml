@@ -47,55 +47,56 @@
                 <div class="col-lg-8 mx-auto">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
                     <form id="contactForm" name="sentMessage" novalidate="novalidate">
+
+
                         @using (Html.BeginForm())
                         {
                             @Html.AntiForgeryToken()
 
-                        <div class="form-horizontal">
-                           
-                            <hr />
-                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group">
-                            <!--@Html.LabelFor(model => model.id_atividade, htmlAttributes: new { @class = "control-label col-md-2", type="hidden" })-->
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.id_atividade, new { htmlAttributes = new { @class = "form-control", type = "hidden" } })
-                                @Html.ValidationMessageFor(model => model.id_atividade, "", new { @class = "text-danger", type = "hidden" })
-                            </div>
-                        </div>
-
+                            <div class="form-horizontal">
+                              
+                                <hr />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                             <div class="form-group">
-                                @Html.LabelFor(model => model.nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <!--@Html.LabelFor(model => model.id_atividade, htmlAttributes: new { @class = "control-label col-md-2" })-->
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+                                    @Html.EditorFor(model => model.id_atividade, new { htmlAttributes = new { @class = "form-control", type="hidden", Value="0" } })
+                                    @Html.ValidationMessageFor(model => model.id_atividade, "", new { @class = "text-danger" })
                                 </div>
                             </div>
 
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
 
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.descricao, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.descricao, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
 
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.descricao, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.descricao, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.descricao, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.avaliacao, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.avaliacao, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.avaliacao, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Criar" class="btn btn-primary" />
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <!--@Html.LabelFor(model => model.avaliacao, htmlAttributes: new { @class = "control-label col-md-2", type = "hidden" })-->
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.avaliacao, new { htmlAttributes = new { @class = "form-control", type = "hidden", @Valor="0" } })
-                                    @Html.ValidationMessageFor(model => model.avaliacao, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Create" class="btn btn-primary btn-xl" />
-                                </div>
-                            </div>
-                        </div>
                         }
+
                         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-bottom" id="mainNav">
                             <div class="container">
                                 <a class="navbar-brand js-scroll-trigger" href="https://localhost:44344/Home/Index_Intituicao"><img class="img-fluid center" style="width: 250px;" src="~/images/logo-single-line.png" alt="" /></a>

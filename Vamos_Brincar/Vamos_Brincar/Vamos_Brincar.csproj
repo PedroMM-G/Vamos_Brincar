@@ -450,7 +450,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Ati\Index.cshtml" />
-    <Content Include="Views\Ati\Create.cshtml" />
     <Content Include="Views\Ati\VamosBrincar.cshtml" />
     <Content Include="Views\Crianca\Index.cshtml" />
     <Content Include="Views\Crianca\Create.cshtml" />
@@ -477,6 +476,7 @@
     <Content Include="Views\Instituicao\Create.cshtml" />
     <Content Include="Views\Instituicao\Edit.cshtml" />
     <Content Include="Views\Instituicao\Delete.cshtml" />
+    <Content Include="Views\Ati\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

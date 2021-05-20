@@ -15,11 +15,12 @@ namespace Vamos_Brincar.Models
     {
 
         public int id_crianca { get; set; }
-        [Display(Name = "Login")]
+        [Display(Name = "Nome da Criança")]
         [Required(ErrorMessage = "Introduza o seu nome", AllowEmptyStrings = false)]
         public string nome { get; set; }
+        [Display(Name = "Idade da Criança")]
         public int idade { get; set; }
-        [Display(Name = "Password")]
+        [Display(Name = "Palavra-passe")]
         [Required(ErrorMessage = "Introduza o sua palavra-passe", AllowEmptyStrings = false)]
         [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         public string pass { get; set; }

@@ -46,7 +46,7 @@ namespace Vamos_Brincar.Controllers
 
                 }
 
-                return RedirectToAction("Index");
+                return RedirectToAction("../Home/LoginInst");
             }
             catch
             {

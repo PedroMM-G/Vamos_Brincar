@@ -40,7 +40,7 @@ namespace Vamos_Brincar.Models
         {
             string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
             MySqlConnection mysqlconn = new MySqlConnection(mainconn);
-            string sqlquery = "insert into atividade ( nome, descricao ,avaliacao) values ('" + atiInsert.nome+ "','" + atiInsert.descricao + "','" + atiInsert.avaliacao + "') ";
+            string sqlquery = "insert into atividade (id_atividade, nome, descricao ,avaliacao) values ('" + atiInsert.id_atividade + "','" + atiInsert.nome+ "','" + atiInsert.descricao + "','" + atiInsert.avaliacao + "') ";
             MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
             mysqlconn.Open();
             int i = sqlcomm.ExecuteNonQuery();
